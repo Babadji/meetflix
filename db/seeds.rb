@@ -8,7 +8,8 @@
 
 
 puts 'Creating users...'
-jumaru = User.create(nickname: "Jumaru", email: "chilling@gmail.com")
+User.destroy_all
+jumaru = User.create(nickname: 'Jumaru', email: "chilling@gmail.com")
 emil = User.create(nickname: "Mimil", email: "campagne@gmail.com")
 hippo = User.create(nickname: "Popotame", email: "cruising@gmail.com")
 claire = User.create(nickname: "babadji", email: "exquis@hotmail.fr")
