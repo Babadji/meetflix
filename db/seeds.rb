@@ -15,6 +15,7 @@ batman = Star.create(name: 'Batman', category: 'The Batman', price: 150000)
 
 
 
+
 puts "#{cersei.name} created"
 
 puts "#{tommy.name} created"
