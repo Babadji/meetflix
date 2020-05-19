@@ -2,6 +2,7 @@ class StarsController < ApplicationController
 
   def index
     @stars = policy_scope(Star)
+    @stars = Star.all
   end
 
   def show
@@ -48,6 +49,6 @@ class StarsController < ApplicationController
   end
 
   def star_params
-    params.require(:star).permit(:name)
+    params.require(:star).permit(:name, :photo)
   end
 end

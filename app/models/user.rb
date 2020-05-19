@@ -5,8 +5,10 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
-  has_many :stars
+  
   has_many :reservations
+
+  has_many :stars, dependent: :destroy
+
   # validates :nickname, presence: true, uniqueness: { case_sensitive: false }, length: {maximum: 50}
 end
