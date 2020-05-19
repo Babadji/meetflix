@@ -1,26 +1,32 @@
 <div class="container">
+
   <div class="wrapper">
+
     <div class="star-title">
       <h1>
         <%= @star.name%>
       </h1>
-      <p>
+      <p>in
         <%= @star.category%>
       </p>
-      <h4><%= @star.price%></h4>
+      <h4><%= @star.price%> $/J</h4>
     </div>
+
     <div class="product-user">
-    <p>Posted by: <%= @star.user.nickname%></p>
-    <img class="avatar-user" src="">
+      <p>Posted by : <%= @star.user.nickname%></p>
+      <img class="avatar-user" src="">
     </div>
+
   </div>
 
   <div class="wrapper">
+
     <div class="star-desc">
       <h2>Live an incredible experience with <%= @star.name%></h2>
       <p><%= @star.description%><p>
       <!--<div class="review"><ul class="list-inline"><li><img class="fa fa-star"></li>*5</ul></div> -->
     </div>
+
     <div class="book-star">
 
       <div class="dates">
