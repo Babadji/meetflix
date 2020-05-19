@@ -10,6 +10,7 @@ claire = User.create(nickname: "babadji", email: "exquis@hotmail.fr", password: 
 obama = User.create(nickname: "babama", email: "president@yahoo.com", password: "123456")
 puts 'Success'
 puts 'Creating characters (stars)...'
+
 # # Stars
 
 cersei = Star.new(name: 'Cersei', category: 'GoT', price: 50)
@@ -45,6 +46,5 @@ puts User.last
 puts Star.last
 
 # More seeds to come when other models are created.
+
 puts 'Seeding complete'
-
-
