@@ -16,7 +16,7 @@ puts 'Creating characters (stars)...'
 cersei = Star.new(name: 'Cersei', category: 'GoT', price: 50)
 cersei.user = jumaru
 cersei.save!
-tommy = Star.new(name: 'Thomas Shelby', category: 'Peaky Blinders', price: 45)
+tommy = Star.new(name: 'Thomas Shelby', category: 'Peaky Blinders', price: 45, description: "Après une expérience traumatisante durant la Première Guerre mondiale où il a notamment combattu lors de la Bataille de Verdun et de la Somme, Thomas reprend en main le business familial : racket et protection, contrebande de tabac et d'alcool, paris illégaux... De par sa nature ambitieuse et son sens des affaires, Thomas transforme rapidement le petit gang de Birmingham en un véritable empire, en créant la Shelby Company Limited, en s'étendant vers Londres et par la suite en rivalisant avec la mafia new-yorkaise lors de la prohibition sur l'alcool." )
 tommy.user = emil
 tommy.save!
 tokyo = Star.new(name: 'Tokyo', category: 'Casa del Papel', price: 75)
