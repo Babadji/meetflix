@@ -1,1 +1,132 @@
-// Specific CSS for your home-page
+/*HERO*/
+
+.hero {
+  background-image: url("casa3.jpg");
+  background-size: cover;
+  color: white;
+  padding: 300px 0;
+  height: 500px;
+  background-color: rgba(0,0,0,0.9);
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0,0,0,0.01);
+  margin-bottom: 50px;
+}
+
+
+/*TAB*/
+
+.tabs-underlined {
+  display: flex;
+  align-items: center;
+}
+
+.tabs-underlined .tab-underlined {
+  color: black;
+  padding: 8px;
+  margin: 8px 16px;
+  opacity: .4;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 4px solid transparent;
+}
+
+.tabs-underlined .tab-underlined.active {
+  opacity: 1;
+  border-bottom: 3px solid #555555;
+}
+
+/*MENU-FLEX*/
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+/*DIV INSIDE*/
+
+.item-container {
+  background-color: white;
+  margin: 0px;
+  border-radius: 4px;
+  width: 180px;
+  height: 80px;
+  padding: 10px;
+  padding-bottom: 0px;
+  box-shadow: 1px 11px 16px -4px rgba(0,0,0,0.36);
+  text-align: start;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+/*BOUTONS*/
+
+.item-container a {
+  text-decoration: none;
+  align-content: center;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+/*  font-weight: bold;*/
+  font-size: 16px;
+  background: linear-gradient(#000428, #004e92);
+  transition: background 0.3s ease;
+/*  border: 1px solid #0F60C4;*/
+}
+
+.item-container:hover a {
+  background: linear-gradient(#004e92, #000428);
+  color: white;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+
+/*CARDS*/
+
+.container-experience {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 350px;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+

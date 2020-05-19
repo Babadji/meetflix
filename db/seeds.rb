@@ -22,24 +22,44 @@ cersei.save!
 
 tommy = Star.new(name: 'Thomas Shelby', category: 'Peaky Blinders', price: 45, description: "Après une expérience traumatisante durant la Première Guerre mondiale où il a notamment combattu lors de la Bataille de Verdun et de la Somme, Thomas reprend en main le business familial : racket et protection, contrebande de tabac et d'alcool, paris illégaux... De par sa nature ambitieuse et son sens des affaires, Thomas transforme rapidement le petit gang de Birmingham en un véritable empire, en créant la Shelby Company Limited, en s'étendant vers Londres et par la suite en rivalisant avec la mafia new-yorkaise lors de la prohibition sur l'alcool." )
 tommy.user = emil
+tommy_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589904359/pk50kkz8pb8ejtpfoxdgv92d615m.jpg')
+tommy.photo.attach(io: tommy_photo, filename: 'tommy_photo.jpg', content_type: 'image/jpg')
 tommy.save!
+
 tokyo = Star.new(name: 'Tokyo', category: 'Casa del Papel', price: 75)
 tokyo.user = hippo
+tokyo_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589904359/pk50kkz8pb8ejtpfoxdgv92d615m.jpg')
+tokyo.photo.attach(io: tokyo_photo, filename: 'tokyo_photo.jpg', content_type: 'image/jpg')
 tokyo.save!
+
 batman = Star.new(name: 'Batman', category: 'The Batman', price: 89,)
 batman.user = claire
+batman_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589904359/pk50kkz8pb8ejtpfoxdgv92d615m.jpg')
+batman.photo.attach(io: batman_photo, filename: 'batman_photo.jpg', content_type: 'image/jpg')
 batman.save!
+
 naruto = Star.new(name: 'Naruto', category: 'Naruto', price: 85)
 naruto.user = hippo
+naruto_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589904359/pk50kkz8pb8ejtpfoxdgv92d615m.jpg')
+naruto.photo.attach(io: naruto_photo, filename: 'naruto_photo.jpg', content_type: 'image/jpg')
 naruto.save!
+
 troy = Star.new(name: 'Troy Barnes', category: 'Community', price: 10)
 troy.user = obama
+troy_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589904359/pk50kkz8pb8ejtpfoxdgv92d615m.jpg')
+troy.photo.attach(io: troy_photo, filename: 'troy_photo.jpg', content_type: 'image/jpg')
 troy.save!
+
 barney = Star.new(name: 'Barney Stinson', category: 'How I met your mother', price: 90)
 barney.user = emil
+barney_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589904359/pk50kkz8pb8ejtpfoxdgv92d615m.jpg')
+barney.photo.attach(io: barney_photo, filename: 'barney_photo.jpg', content_type: 'image/jpg')
 barney.save!
+
 rick = Star.new(name: 'Rick', category: 'Rick and Morty', price: 60)
 rick.user = jumaru
+rick_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589904359/pk50kkz8pb8ejtpfoxdgv92d615m.jpg')
+rick.photo.attach(io: rick_photo, filename: 'rick_photo.jpg', content_type: 'image/jpg')
 rick.save!
 puts 'Success'
 
