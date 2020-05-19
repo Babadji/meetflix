@@ -22,18 +22,11 @@
       <!--<div class="review"><ul class="list-inline"><li><img class="fa fa-star"></li>*5</ul></div> -->
     </div>
     <div class="book-star">
-
-      <div class="dates">
-        <form class="date">
-          <input type="date">
-        </form>
-        <form class="date">
-          <input type="date">
-        </form>
-      </div>
-
-      <a class="btn btn-warning" value="BOOK">BOOK</a>
-      
+        <%= simple_form_for [@star, Reservation.new] do |f| %>
+        <%= f.input :start, as: :date %>
+        <%= f.input :end, as: :date%>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
     </div>
   </div>
 </div>

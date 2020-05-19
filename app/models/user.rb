@@ -7,6 +7,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :stars
-
+  has_many :reservations
   # validates :nickname, presence: true, uniqueness: { case_sensitive: false }, length: {maximum: 50}
 end

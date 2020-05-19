@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_05_19_134129) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "total_amoount"
     t.index ["star_id"], name: "index_reservations_on_star_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
