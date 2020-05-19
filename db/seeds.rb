@@ -47,3 +47,4 @@ puts Star.last
 # More seeds to come when other models are created.
 puts 'Seeding complete'
 
+
