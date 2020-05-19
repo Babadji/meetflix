@@ -6,7 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :stars
+  has_many :stars, dependent: :destroy
 
   # validates :nickname, presence: true, uniqueness: { case_sensitive: false }, length: {maximum: 50}
 end
