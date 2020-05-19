@@ -17,21 +17,21 @@ puts 'Success'
 puts 'Creating characters (stars)...'
 Star.destroy_all
 # Stars
-cersei = Star.create(name: 'Cersei', category: 'GoT', price: 50, user: jumaru)
+cersei = Star.create(name: 'Cersei', category: 'GoT', price: 50, user_id: jumaru)
 
-tommy = Star.create(name: 'Thomas Shelby', category: 'Peaky Blinders', price: 45, user: emil)
+tommy = Star.create(name: 'Thomas Shelby', category: 'Peaky Blinders', price: 45, user_id: emil)
 
-tokyo = Star.create(name: 'Tokyo', category: 'Casa del Papel', price: 75, user: hippo)
+tokyo = Star.create(name: 'Tokyo', category: 'Casa del Papel', price: 75, user_id: hippo)
 
-batman = Star.create(name: 'Batman', category: 'The Batman', price: 89, user: claire)
+batman = Star.create(name: 'Batman', category: 'The Batman', price: 89, user_id: claire)
 
-naruto = Star.create(name: 'Naruto', category: 'Naruto', price: 85, user: obama)
+naruto = Star.create(name: 'Naruto', category: 'Naruto', price: 85, user_id: obama)
 
-troy = Star.create(name: 'Troy Barnes', category: 'Community', price: 10, user: emil)
+troy = Star.create(name: 'Troy Barnes', category: 'Community', price: 10, user_id: emil)
 
-barney = Star.create(name: 'Barney Stinson', category: 'How I met your mother', price: 90, user: hippo)
+barney = Star.create(name: 'Barney Stinson', category: 'How I met your mother', price: 90, user_id: hippo)
 
-rick = Star.create(name: 'Rick', category: 'Rick and Morty', price: 60, user: claire)
+rick = Star.create(name: 'Rick', category: 'Rick and Morty', price: 60, user_id: claire)
 puts 'Success'
 
 
