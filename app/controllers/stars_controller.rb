@@ -2,6 +2,7 @@ class StarsController < ApplicationController
 
   def index
     @stars = policy_scope(Star)
+    @stars = Star.all
   end
 
   def show
