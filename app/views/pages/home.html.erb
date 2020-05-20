@@ -31,111 +31,28 @@
 
 
   <!-- LIVE A STAR EXPERIENCE -->
- <!--  <div class="container-experience container">
-    <div>
-      <div class="card-trip">
-        <img src="https://res.cloudinary.com/dnzggrpqe/image/upload/v1589900744/cersei_auj4y9.jpg" />
-        <div class="card-trip-infos">
-          <div>
-            <h2>Cersei</h2>
-            <p>Take back the throne with Cersei</p>
-          </div>
-          <h2 class="card-trip-pricing">£99.99</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
-      </div>
-    </div>
 
-    <div>
-      <div class="card-trip">
-        <img src="https://res.cloudinary.com/dnzggrpqe/image/upload/v1589926194/tokyo_tn2xc0.webp" />
-        <div class="card-trip-infos">
-          <div>
-            <h2>Tokyo</h2>
-            <p>Rob a bank with Tokyo</p>
-          </div>
-          <h2 class="card-trip-pricing">£99.99</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="card-trip">
-        <img src="https://res.cloudinary.com/dnzggrpqe/image/upload/v1589926470/peakyblinders3003a_zh1xex.jpg" />
-        <div class="card-trip-infos">
-          <div>
-            <h2>Tommy</h2>
-            <p>Gamble with Tommy</p>
-          </div>
-          <h2 class="card-trip-pricing">£99.99</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="container-experience container">
-    <div>
-      <div class="card-trip">
-        <img src="https://res.cloudinary.com/dnzggrpqe/image/upload/v1589928646/jane-the-virgin-netflix-intrigues-casting-date-de-sortie-toutes-les-infos-sur-la-saison-5_yuwqd0.jpg" />
-        <div class="card-trip-infos">
-          <div>
-            <h2>Jane</h2>
-            <p>Sweet Mexican vibes with Jane</p>
-          </div>
-          <h2 class="card-trip-pricing">£99.99</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="card-trip">
-        <img src="https://res.cloudinary.com/dnzggrpqe/image/upload/v1589928725/outlander_niyj3j.jpg" />
-        <div class="card-trip-infos">
-          <div>
-            <h2>Jamie</h2>
-            <p>Fight a scottish battle with Jamie!</p>
-          </div>
-          <h2 class="card-trip-pricing">£99.99</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
-      </div>
-    </div>
-
-    <div>
-      <div class="card-trip">
-        <img src="https://res.cloudinary.com/dnzggrpqe/image/upload/v1589928878/120801mag-gabriel-macht-suits1_v7ojh1.jpg" />
-        <div class="card-trip-infos">
-          <div>
-            <h2>Harvey</h2>
-            <p>Win a lawsuit with Harvey</p>
-          </div>
-          <h2 class="card-trip-pricing">£99.99</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-<div class="container-experience container">
-  <div class="cards mr-4 ml-4">
     <% @stars.each do |star| %>
-      <div class="card-trip">
-        <img src="https://res.cloudinary.com/dnzggrpqe/image/upload/v1589900744/cersei_auj4y9.jpg" />
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= link_to star.name, star_path(star) %></h2>
-            <p>Take back the throne with Cersei</p>
+      <div>
+        <div class="card-trip">
+          <%= cl_image_tag star.photo.key%>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= star.name %></h2>
+              <p><%= star.description %></p>
+            </div>
+            <h2 class="card-trip-pricing"><%= star.price %></h2>
+            <img src="<#%= user.avatar %>" class="card-trip-user avatar-bordered" />
+            <%= link_to star.name, star_path(star) %>
           </div>
-          <h2 class="card-trip-pricing">£99.99</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
         </div>
       </div>
     <% end %>
   </div>
-</div>
+
+
 
 
 

@@ -4,7 +4,6 @@ class PagesController < ApplicationController
 
 
   def home
-    @stars = policy_scope(Star)
     @stars = Star.all
   end
 
@@ -13,10 +12,8 @@ class PagesController < ApplicationController
     @stars = Star.all
   end
 
-
-   def show
+  def show
     @star = Star.find(params[:id])
     authorize @star
   end
-
 end
