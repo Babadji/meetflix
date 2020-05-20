@@ -3,6 +3,14 @@ class StarsController < ApplicationController
   def index
     @stars = policy_scope(Star)
     @stars = Star.all
+
+    @stars = Star.geocoded
+    @markers = @stars.map do |star|
+      {
+        lat: star.latitude,
+        lng: star.longitude
+      }
+    end
   end
 
   def show
