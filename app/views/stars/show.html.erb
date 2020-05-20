@@ -3,21 +3,25 @@
   <div class="wrapperS1">
 
     <div class="star-titleS">
-    <!--<% if @star.photo %>
-    <%= cl_image_tag @star.photo.key%>
-    <% end %>-->
-      <h1>
-        <%= @star.name%>
-      </h1>
-      <p>in
-        <%= @star.category%>
-      </p>
-      <h4><%= @star.price%> $/J</h4>
+      <div class="backgroundimgS">
+        <% if @star.photo%>
+        <%= cl_image_tag @star.photo.key%>
+        <% end%>
+      </div>
+      <div class="text-imageS">
+        <h1>
+          <%= @star.name%>
+        </h1>
+        <p>in
+          <%= @star.category%>
+        </p>
+        <h4><%= @star.price%> $/J</h4>
+      </div>
     </div>
 
     <div class="product-userS">
-    <p>Posted by: <%= @star.user.nickname%></p>
-    <img class="avatar-userS" src="">
+      <p>Posted by: <%= @star.user.nickname%></p>
+      <img class="avatar-userS" src="">
     </div>
 
   </div>
