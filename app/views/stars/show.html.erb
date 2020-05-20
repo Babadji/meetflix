@@ -1,8 +1,11 @@
-<div class="container">
+<div class="containerS">
 
-  <div class="wrapper">
+  <div class="wrapperS1">
 
-    <div class="star-title">
+    <div class="star-titleS">
+    <!--<% if @star.photo %>
+    <%= cl_image_tag @star.photo.key%>
+    <% end %>-->
       <h1>
         <%= @star.name%>
       </h1>
@@ -12,22 +15,28 @@
       <h4><%= @star.price%> $/J</h4>
     </div>
 
-    <div class="product-user">
+    <div class="product-userS">
     <p>Posted by: <%= @star.user.nickname%></p>
-    <img class="avatar-user" src="">
+    <img class="avatar-userS" src="">
     </div>
 
   </div>
 
-  <div class="wrapper">
+  <div class="wrapperS2">
 
-    <div class="star-desc">
+    <div class="star-descS">
       <h2>Live an incredible experience with <%= @star.name%></h2>
-      <p><%= @star.description%><p>
+      <div class="descriptionS">
+        <p><%= @star.description%><p>
+        <div id="map"
+      style="width: 100%; height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
       <!--<div class="review"><ul class="list-inline"><li><img class="fa fa-star"></li>*5</ul></div> -->
     </div>
 
-    <div class="book-star">
+    <div class="book-starS">
         <%= simple_form_for [@star, Reservation.new] do |f| %>
         <%= f.input :start, as: :date %>
         <%= f.input :end, as: :date%>
