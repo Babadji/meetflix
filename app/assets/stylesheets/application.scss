@@ -11,6 +11,7 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/form";
 @import "components/footer";
 @import "pages/index";
 @import "pages/showstar";
@@ -19,4 +20,10 @@
 
 .container {
   width: 1900px;
+}
+
+.login-bg {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
 }
