@@ -31,7 +31,7 @@
 
 
   <!-- LIVE A STAR EXPERIENCE -->
-  <div class="container-experience container">
+ <!--  <div class="container-experience container">
     <div>
       <div class="card-trip">
         <img src="https://res.cloudinary.com/dnzggrpqe/image/upload/v1589900744/cersei_auj4y9.jpg" />
@@ -117,10 +117,25 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+<div class="container-experience container">
+  <div class="cards mr-4 ml-4">
+    <% @stars.each do |star| %>
+      <div class="card-trip">
+        <img src="https://res.cloudinary.com/dnzggrpqe/image/upload/v1589900744/cersei_auj4y9.jpg" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= link_to star.name, star_path(star) %></h2>
+            <p>Take back the throne with Cersei</p>
+          </div>
+          <h2 class="card-trip-pricing">£99.99</h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
+    <% end %>
   </div>
-
-
-
+</div>
 
 
 

@@ -10,7 +10,7 @@ class ReservationsController < ApplicationController
     @reservation.user = current_user
     @reservation.star_id = params[:star_id]
     if @reservation.save
-      redirect_to stars_path, notice: "Reservation successfully created"
+      redirect_to root_path, notice: "Reservation successfully created"
     else
       render :new
     end
