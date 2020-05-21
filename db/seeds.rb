@@ -56,6 +56,8 @@ jamie.photo.attach(io: jamie_photo, filename: 'jamie_photo.jpg', content_type: '
 jamie.address = 'Castlehill, Edinburgh EH1 2NG, Royaume-Uni'
 jamie.save!
 
+# RESERVATIONS
+
 
 puts 'Success'
 
