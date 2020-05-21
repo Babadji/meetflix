@@ -31,8 +31,9 @@ class StarsController < ApplicationController
     @star = Star.new(star_params)
     @star.user = current_user
     authorize @star
-    if star.save
-      redirect_to @star, notice: "Star has been succesfully created"
+    if @star.save!
+      redirect_to star_path(@star)
+      # user_path(@user), notice: "Star has been succesfully created"
     else
       render :new
     end
@@ -58,6 +59,6 @@ class StarsController < ApplicationController
   end
 
   def star_params
-    params.require(:star).permit(:name, :photo)
+    params.require(:star).permit(:name, :category, :price, :photo)
   end
 end

@@ -1,1 +1,59 @@
-<h1>Here is user profile</h1>
+<div class="container">
+  <br>
+  <br>
+  <h1><%= "Hello " %><span class="underline"><%= "#{@user.nickname}!" %></span><%= " Welcome to your profile 😎" %></h1>
+
+<!--   EDIT YOUR PERSONAL INFO -->
+
+  <%= link_to "Edit your profile", "#", class: "btn btn-ghost" %>
+
+  <div>
+
+  </div>
+  <br>
+  <br>
+
+  <%= render 'stars/form' %>
+
+  <!--    VIEW YOUR LAST POST -->
+
+  <div>
+    <div class="container-orders">
+      <% @stars.each do |star| %>
+        <div>
+          <div class="card-product container-orders">
+            <%= cl_image_tag star.photo.key%>
+            <div class="card-product-infos">
+              <h2>You lived a greatfull experience with <%= star.name %></h2>
+              <p>Le <%= reservation.date %> and you<strong>enjoyed it</strong>.</p>
+            </div>
+            <br>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+<!--    VIEW YOUR LAST RESERVATIONS -->
+
+  <div>
+    <h2>Your last orders</h2>
+  </div>
+
+  <div class="container-orders">
+    <% @reservations.each do |reservation| %>
+      <div>
+        <div class="card-product container-orders">
+          <%= cl_image_tag star.photo.key%>
+          <div class="card-product-infos">
+            <h2>You lived a greatfull experience with <%= star.name %></h2>
+            <p>Le <%= reservation.date %> and you<strong>enjoyed it</strong>.</p>
+          </div>
+          <br>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
