@@ -14,7 +14,7 @@ puts 'Creating characters (stars)...'
 
 # # Stars
 
-cersei = Star.new(name: 'Cersei', category: 'GoT', price: 50, description: "Take back the throne with Cersei.")
+cersei = Star.new(name: 'Cersei', category: 'Games Of Thrones', price: 50, description: "Take back the throne with Cersei.")
 cersei.user = jumaru
 cersei_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589971797/amusedcersei_k9gpes.jpg')
 cersei.photo.attach(io: cersei_photo, filename: 'cersei_photo.jpg', content_type: 'image/jpg')
@@ -26,7 +26,7 @@ tommy_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v15899
 tommy.photo.attach(io: tommy_photo, filename: 'tommy_photo.jpg', content_type: 'image/jpg')
 tommy.save!
 
-tokyo = Star.new(name: 'Tokyo', category: 'Casa del Papel', price: 75, description: "Rob a bank with Tokyo")
+tokyo = Star.new(name: 'Tokyo', category: 'Casa de Papel', price: 75, description: "Rob a bank with Tokyo")
 tokyo.user = hippo
 tokyo_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589926194/tokyo_tn2xc0.webp')
 tokyo.photo.attach(io: tokyo_photo, filename: 'tokyo_photo.webp', content_type: 'image/webp')
@@ -38,7 +38,7 @@ harvey_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589
 harvey.photo.attach(io: harvey_photo, filename: 'harvey_photo.jpg', content_type: 'image/jpg')
 harvey.save!
 
-jane = Star.new(name: 'Jane', category: 'Jane', price: 85, description: "Mexican Time with Jane")
+jane = Star.new(name: 'Jane', category: 'Jane the virgin', price: 85, description: "Mexican Time with Jane")
 jane.user = hippo
 jane_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589928646/jane-the-virgin-netflix-intrigues-casting-date-de-sortie-toutes-les-infos-sur-la-saison-5_yuwqd0.jpg')
 jane.photo.attach(io: jane_photo, filename: 'jane_photo.jpg', content_type: 'image/jpg')
