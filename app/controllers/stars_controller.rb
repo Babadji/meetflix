@@ -9,12 +9,14 @@ class StarsController < ApplicationController
     @star = Star.find(params[:id])
     authorize @star
     @stars = Star.geocoded
-    @markers = @stars.map do |star|
-      {
-        lat: star.latitude,
-        lng: star.longitude
-      }
-    end
+
+    @marker = {
+      "lat" => @star.latitude,
+      "lng" => @star.longitude
+    }
+
+    @markers = []
+    @markers << @marker
   end
 
   def new
