@@ -43,20 +43,17 @@
       <div>
         <div class="card-trip">
           <%= cl_image_tag star.photo.key%>
-          <div class="card-trip-infos">
-            <div>
-              <h2><%= star.name %></h2>
-              <p><%= star.description %></p>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= link_to star.name, star_path(star) %></h2>
+                <p><%= star.description %></p>
+              </div>
+              <h2 class="card-trip-pricing"><%= star.price %> $/day</h2>
             </div>
-            <h2 class="card-trip-pricing"><%= star.price %></h2>
-            <%= link_to star.name, star_path(star) %>
-          </div>
         </div>
       </div>
     <% end %>
   </div>
-
-
 
 
 
