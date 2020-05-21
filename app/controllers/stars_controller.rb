@@ -3,7 +3,11 @@ class StarsController < ApplicationController
   def index
     @stars = policy_scope(Star)
     @stars = Star.all
+  end
 
+  def show
+    @star = Star.find(params[:id])
+    authorize @star
     @stars = Star.geocoded
     @markers = @stars.map do |star|
       {
@@ -11,11 +15,6 @@ class StarsController < ApplicationController
         lng: star.longitude
       }
     end
-  end
-
-  def show
-    @star = Star.find(params[:id])
-    authorize @star
   end
 
   def new

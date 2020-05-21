@@ -18,12 +18,14 @@ cersei = Star.new(name: 'Cersei', category: 'Games Of Thrones', price: 50, descr
 cersei.user = jumaru
 cersei_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589971797/amusedcersei_k9gpes.jpg')
 cersei.photo.attach(io: cersei_photo, filename: 'cersei_photo.jpg', content_type: 'image/jpg')
+cersei.address = '97 boulevard arago, Paris'
 cersei.save!
 
 tommy = Star.new(name: 'Thomas Shelby', category: 'Peaky Blinders', price: 45, description: "Deal with Mr Shelby." )
 tommy.user = emil
 tommy_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589926470/peakyblinders3003a_zh1xex.jpg')
 tommy.photo.attach(io: tommy_photo, filename: 'tommy_photo.jpg', content_type: 'image/jpg')
+tommy.address = '1, Kings Mall Shopping Centre, King St, Hammersmith W6 0PZ, United Kingdom'
 tommy.save!
 
 tokyo = Star.new(name: 'Tokyo', category: 'Casa de Papel', price: 75, description: "Rob a bank with Tokyo")
