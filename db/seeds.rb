@@ -25,7 +25,7 @@ tommy = Star.new(name: 'Thomas Shelby', category: 'Peaky Blinders', price: 45, d
 tommy.user = emil
 tommy_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589926470/peakyblinders3003a_zh1xex.jpg')
 tommy.photo.attach(io: tommy_photo, filename: 'tommy_photo.jpg', content_type: 'image/jpg')
-tommy.address = '1, Kings Mall Shopping Centre, King St, Hammersmith W6 0PZ, United Kingdom'
+tommy.address = 'Chamberlain Square, Birmingham B3 3DH, Royaume-Uni'
 tommy.save!
 
 tokyo = Star.new(name: 'Tokyo', category: 'Casa de Papel', price: 75, description: "Rob a bank with Tokyo")
