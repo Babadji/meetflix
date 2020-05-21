@@ -35,16 +35,16 @@
       </div>
       <!--<div class="review"><ul class="list-inline"><li><img class="fa fa-star"></li>*5</ul></div> -->
     </div>
-    <div id="map"
-      style="width: 200px; height: 200px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
     <div class="book-starS">
+    <div id="map"
+      style="width: 300px; height: 300px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
         <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
     <%= simple_form_for [@star, Reservation.new] do |f| %>
-      <%= f.input :start, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :end, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :start, as: :string, required: true, input_html: {class: "datepicker"} %>
+      <%= f.input :end, as: :string, required: true, input_html: {class: "datepicker"} %>
       <%= f.button :submit, "BOOK", class: "btn btn-danger" %>
     <% end %>
     </div>
