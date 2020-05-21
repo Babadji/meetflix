@@ -13,20 +13,25 @@
 
   <!-- FORM FILTER -->
 
-  <div class="flex-container">
-    <div class="item-container">
-      <p>Select your star</p>
-      <input type="text" name="text" placeholder="Pick a star">
+  <div class="search_form">
+    <div class="search_item">
+      <%= form_tag root_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a Character"
+        %>
     </div>
 
-    <div class="item-container">
+   <!--  <div class="search_item">
       <p>Pick a date</p>
       <input type="date" name="dateofdate" id="dateofdate">
-    </div>
+    </div> -->
 
-    <div class="item-container">
-      <a class="button" href="#">Search</a>
+    <div class="search_item">
+      <%= submit_tag "Search", class: "btn-search" %>
     </div>
+    <% end %>
   </div>
 
 
