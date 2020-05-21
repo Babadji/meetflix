@@ -1,0 +1,30 @@
+.search_form {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  margin: 0 500px 20px 500px;
+  padding: 20px;
+  box-shadow: 1px 11px 16px -4px rgba(0,0,0,0.36);
+}
+
+.search_item {
+  display: flex;
+  margin: 0 20px;
+  align-items: center;
+}
+
+.btn-search {
+  font-size: 16px;
+  background: #D32F26;
+  transition: background 0.5s ease;
+  text-decoration: none;
+  align-content: center;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+}
+
+.btn-search:hover {
+  background: #b31d14;
+  color: white;
+}
