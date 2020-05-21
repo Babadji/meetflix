@@ -19,13 +19,12 @@
 
   <div>
     <div class="container-orders">
-      <% @stars.each do |star| %>
+      <% @post_stars.each do |star| %>
         <div>
           <div class="card-product container-orders">
             <%= cl_image_tag star.photo.key%>
             <div class="card-product-infos">
-              <h2>You lived a greatfull experience with <%= star.name %></h2>
-              <p>Le <%= reservation.date %> and you<strong>enjoyed it</strong>.</p>
+              <p>TODO</p>
             </div>
             <br>
           </div>
@@ -48,7 +47,7 @@
           <%= cl_image_tag star.photo.key%>
           <div class="card-product-infos">
             <h2>You lived a greatfull experience with <%= star.name %></h2>
-            <p>Le <%= reservation.date %> and you<strong>enjoyed it</strong>.</p>
+            <p>Le <%= reservation.start %> to <%= reservation.end %> and you<strong>enjoyed it</strong>.</p>
           </div>
           <br>
         </div>
