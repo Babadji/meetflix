@@ -14,15 +14,14 @@
         <li class="nav-item active">
           <span class="nav-link"><%= current_user.email %></span>
           <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://i.ya-webdesign.com/images/profile-buttons-png-5.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Dashborad", "#", class: "dropdown-item" %>
+            <%= link_to "Dashboard", user_path(current_user), class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
