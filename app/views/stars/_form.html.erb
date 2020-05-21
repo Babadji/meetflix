@@ -1,0 +1,12 @@
+<%= simple_form_for [@user, Star.new] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :category %>
+  <%= f.input :price %>
+  <%= f.input :description %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit %>
+<% end %>
+
+
+<hr>
+  <%= link_to "Go back to stars list", stars_path %>
