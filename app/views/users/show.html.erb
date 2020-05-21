@@ -12,8 +12,12 @@
   </div>
   <br>
   <br>
+  <h2>Create a new star</h2>
 
-  <%= render 'stars/form' %>
+  <div>
+    <%= render 'stars/form' %>
+  </div>
+
 
   <!--    VIEW YOUR LAST POST -->
 
@@ -24,7 +28,14 @@
           <div class="card-product container-orders">
             <%= cl_image_tag star.photo.key%>
             <div class="card-product-infos">
-              <p>TODO</p>
+              <p><strong>Your date :</strong></p>
+              <p><%= star.name %></p>
+              <% if policy(star).edit? %>
+              <%= link_to 'Edit', edit_user_star_path(star) %>
+              <% end %>
+              <% if policy(star).destroy? %>
+              <%= link_to 'Destroy', star, method: :delete, data: { confirm: "Are you sure you want to delete your star?"} %>
+              <% end %>
             </div>
             <br>
           </div>
@@ -40,13 +51,13 @@
     <h2>Your last orders</h2>
   </div>
 
-  <div class="container-orders">
+  <div class="containerzz">
     <% @reservations.each do |reservation| %>
       <div>
         <div class="card-product container-orders">
-          <%= cl_image_tag star.photo.key%>
+          <%= cl_image_tag reservation.star.photo.key%>
           <div class="card-product-infos">
-            <h2>You lived a greatfull experience with <%= star.name %></h2>
+            <h2>You lived a greatfull experience with <%= reservation.star.name %></h2>
             <p>Le <%= reservation.start %> to <%= reservation.end %> and you<strong>enjoyed it</strong>.</p>
           </div>
           <br>
@@ -55,4 +66,3 @@
     <% end %>
   </div>
 </div>
-
