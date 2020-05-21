@@ -32,24 +32,28 @@ tokyo = Star.new(name: 'Tokyo', category: 'Casa de Papel', price: 75, descriptio
 tokyo.user = hippo
 tokyo_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589926194/tokyo_tn2xc0.webp')
 tokyo.photo.attach(io: tokyo_photo, filename: 'tokyo_photo.webp', content_type: 'image/webp')
+tokyo.address = 'Calle del Dr. Esquerdo, 36, 28009 Madrid, Espagne'
 tokyo.save!
 
 harvey = Star.new(name: 'Harvey', category: 'Suits', price: 89, description: "Win a lawsuit with Harvey")
 harvey.user = claire
 harvey_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589928878/120801mag-gabriel-macht-suits1_v7ojh1.jpg')
 harvey.photo.attach(io: harvey_photo, filename: 'harvey_photo.jpg', content_type: 'image/jpg')
+harvey.address = '1356 Broadway, New York, NY 10018, États-Unis'
 harvey.save!
 
 jane = Star.new(name: 'Jane', category: 'Jane the virgin', price: 85, description: "Mexican Time with Jane")
 jane.user = hippo
 jane_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589928646/jane-the-virgin-netflix-intrigues-casting-date-de-sortie-toutes-les-infos-sur-la-saison-5_yuwqd0.jpg')
 jane.photo.attach(io: jane_photo, filename: 'jane_photo.jpg', content_type: 'image/jpg')
+jane.address = '60 Boulevard de Courcelles, 75017 Paris'
 jane.save!
 
 jamie = Star.new(name: 'Jamie', category: 'Outlander', price: 10, description: "Fight a scottish battle with Jamie")
 jamie.user = obama
 jamie_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589928725/outlander_niyj3j.jpg')
 jamie.photo.attach(io: jamie_photo, filename: 'jamie_photo.jpg', content_type: 'image/jpg')
+jamie.address = 'Castlehill, Edinburgh EH1 2NG, Royaume-Uni'
 jamie.save!
 
 
