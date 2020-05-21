@@ -41,22 +41,12 @@
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
     <div class="book-starS">
-       <%= simple_form_for [@star, Reservation.new] do |f| %>
-        <%= f.input :start, as: :date %>
-        <%= f.input :end, as: :date%>
-        
-        <div class="Datechoose">
-          <div class="D1">
-            <%# <p>From: </p>
-            <input type="date" name="dateofdate" id="dateofdate">
-          </div>
-          <div class="D2">
-            <p>To: </p>
-            <input type="date" name="dateofdate" id="dateofdate"> %>
-          </div>        
-        </div>
-        <div class="bookBouton"><%= f.button :submit, class: 'btn btn-danger'%></div>  
-         <% end %>   
+        <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <%= simple_form_for [@star, Reservation.new] do |f| %>
+      <%= f.input :start, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.button :submit, "BOOK", class: "btn btn-danger" %>
+    <% end %>
     </div>
   </div>
 </div>
