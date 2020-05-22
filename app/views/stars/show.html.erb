@@ -13,13 +13,17 @@
           <%= @star.name%>
         </h1>
         <p>in
-          <%= @star.category%>
+          <strong><%= @star.category%></strong>
         </p>
         <h4><%= @star.price%> $/J</h4>
       </div>
     </div>
 
+    <br>
+    <hr>
+
     <div class="product-userS">
+
       <p>Posted by: <%= @star.user.nickname%></p>
       <div class="avatar-userS">
         <%= cl_image_tag @star.user.photo.key%>
@@ -29,15 +33,12 @@
   </div>
 
   <div class="wrapperS2">
-
     <div class="star-descS">
       <h2>Live an incredible experience with <%= @star.name%></h2>
       <div class="descriptionS">
         <p><%= @star.description%><p>
       </div>
-      <!--<div class="review"><ul class="list-inline"><li><img class="fa fa-star"></li>*5</ul></div> -->
     </div>
-
     <div class="book-starS">
       <div id="map"
         style="width: 300px; height: 300px;"
