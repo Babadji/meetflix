@@ -3,6 +3,7 @@
 
   <div class="col-form">
       <div class="user-image">
+        <%= cl_image_path curent_user.photo.key%>
       </div>
       <h1><%= "Hello " %><span class="underline"><%= "#{@user.nickname}!" %></span><%= " Welcome to your profile 😎" %></h1>
 

@@ -5,6 +5,5 @@ class UsersController < ApplicationController
     authorize @user
     @reservations = Reservation.all
     @post_stars = @user.stars
-
   end
 end

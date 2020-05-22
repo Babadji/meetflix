@@ -26,7 +26,9 @@
 
       <p>Posted by: <%= @star.user.nickname%></p>
       <div class="avatar-userS">
+        <% if @star.user.photo%>
         <%= cl_image_tag @star.user.photo.key%>
+        <% end%>
       </div>  
     </div>
 
