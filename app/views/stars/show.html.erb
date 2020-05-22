@@ -25,7 +25,7 @@
     <div class="product-userS">
 
       <div class="avatar-userS">
-        <% if @star.user.photo%>
+        <% if @star.user.photo.attached?%>
           <%= cl_image_tag @star.user.photo.key%>
         <% end%>
       </div>
