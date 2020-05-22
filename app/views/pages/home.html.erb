@@ -42,7 +42,14 @@
     <% @stars.each do |star| %>
       <div>
         <div class="card-trip">
-          <%= cl_image_tag star.photo.key%>
+          <div class="tag">
+          <% if star.status == true %>
+          <div class="tag-yes">AVAILABLE 🎉</div>
+          <% else %>
+          <div class="tag-no">NOT AVAILABLE 😩</div>
+          <% end %>
+          </div>
+          <%= cl_image_tag star.photo.key, class: "card-image"%>
             <div class="card-trip-infos">
               <div>
                 <h2><%= link_to star.name, star_path(star) %></h2>

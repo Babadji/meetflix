@@ -104,14 +104,26 @@
   object-fit: cover;
 }
 
-.status-yes {
+.card-trip {
+  &:hover {
+    .card-image {
+      opacity: 0.4;
+    }
+  };
+}
+
+.card-image:hover {
+  opacity: 0;
+}
+
+.tag-yes {
   background-color: #1edd88;
   font-weight: bolder;
   color: white;
   text-align: center;
 }
 
-.status-no {
+.tag-no {
   background-color: #D32F26;
   font-weight: bolder;
   color: white;
@@ -161,6 +173,8 @@
   text-decoration: none;
   color: black;
 }
+
+
 
 
 /*SPAN*/

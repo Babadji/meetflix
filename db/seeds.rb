@@ -32,7 +32,7 @@ puts 'Creating characters (stars)...'
 
 # # Stars
 
-cersei = Star.new(name: 'Cersei', category: 'Games Of Thrones', price: 50, description: "Take back the throne with Cersei.")
+cersei = Star.new(name: 'Cersei', category: 'Games Of Thrones', price: 50, description: "Take back the throne with Cersei.", status: true)
 cersei.user = jumaru
 cersei_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589971797/amusedcersei_k9gpes.jpg')
 cersei.photo.attach(io: cersei_photo, filename: 'cersei_photo.jpg', content_type: 'image/jpg')
@@ -60,14 +60,14 @@ harvey.photo.attach(io: harvey_photo, filename: 'harvey_photo.jpg', content_type
 harvey.address = '1356 Broadway, New York, NY 10018, États-Unis'
 harvey.save!
 
-jane = Star.new(name: 'Jane', category: 'Jane the virgin', price: 85, description: "Mexican Time with Jane")
+jane = Star.new(name: 'Jane', category: 'Jane the virgin', price: 85, description: "Mexican Time with Jane", status: true)
 jane.user = hippo
 jane_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589928646/jane-the-virgin-netflix-intrigues-casting-date-de-sortie-toutes-les-infos-sur-la-saison-5_yuwqd0.jpg')
 jane.photo.attach(io: jane_photo, filename: 'jane_photo.jpg', content_type: 'image/jpg')
 jane.address = '60 Boulevard de Courcelles, 75017 Paris'
 jane.save!
 
-jamie = Star.new(name: 'Jamie', category: 'Outlander', price: 10, description: "Fight a scottish battle with Jamie")
+jamie = Star.new(name: 'Jamie', category: 'Outlander', price: 10, description: "Fight a scottish battle with Jamie", status: true)
 jamie.user = obama
 jamie_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589928725/outlander_niyj3j.jpg')
 jamie.photo.attach(io: jamie_photo, filename: 'jamie_photo.jpg', content_type: 'image/jpg')
