@@ -65,12 +65,11 @@ jane.address = '60 Boulevard de Courcelles, 75017 Paris'
 jane.save!
 
 jamie = Star.new(name: 'Jamie', category: 'Outlander', price: 10, description: "Fight a scottish battle with Jamie", status: true)
-jamie.user = obama
+jamie.user = emile
 jamie_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1589928725/outlander_niyj3j.jpg')
 jamie.photo.attach(io: jamie_photo, filename: 'jamie_photo.jpg', content_type: 'image/jpg')
 jamie.address = 'Castlehill, Edinburgh EH1 2NG, Royaume-Uni'
 jamie.save!
-
 # RESERVATIONS
 
 
