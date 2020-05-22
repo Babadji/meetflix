@@ -23,8 +23,13 @@
     <hr>
 
     <div class="product-userS">
-      <p>Posted by: <strong><%= @star.user.nickname%></strong></p>
-      <img class="avatar-userS" src="">
+
+      <p>Posted by: <%= @star.user.nickname%></p>
+      <div class="avatar-userS">
+        <% if @star.user.photo%>
+        <%= cl_image_tag @star.user.photo.key%>
+        <% end%>
+      </div>  
     </div>
 
   </div>
@@ -36,29 +41,18 @@
         <p><%= @star.description%><p>
       </div>
     </div>
-
-    <div class="container">
-      <div class="row">
-
-        <div class="colonne-map">
-          <div class="book-starS">
-            <div id="map"
-              style="width: 300px; height: 300px;"
-              data-markers="<%= @markers.to_json %>"
-              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-            </div>
-          </div>
-        </div>
-
-        <div class="colonne-form">
-          <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-            <%= simple_form_for [@star, Reservation.new] do |f| %>
-              <%= f.input :start, as: :string, required: true, input_html: {class: "datepicker"} %>
-              <%= f.input :end, as: :string, required: true, input_html: {class: "datepicker"} %>
-              <%= f.button :submit, "BOOK", class: "btn btn-danger" %>
-            <% end %>
-          </div>
-        </div>
+    <div class="book-starS">
+      <div id="map"
+        style="width: 300px; height: 300px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+        <%= simple_form_for [@star, Reservation.new], remote: true do |f| %>
+          <%= f.input :start, as: :string, required: true, input_html: {class: "datepicker"} %>
+          <%= f.input :end, as: :string, required: true, input_html: {class: "datepicker"} %>
+          <%= f.button :submit, "BOOK", class: "btn btn-danger" %>
+        <% end %>
       </div>
     </div>
   </div>

@@ -1,10 +1,11 @@
 <div class="row">
-  <div class="col-img">Image</div>
+  <div class="col-img" style="background-image: url('<%= cl_image_path current_user.photo.key, crop: :fill %>')">
+  </div>
 
   <div class="col-form">
-      <div class="user-image">
-      </div>
       <h1><%= "Hello " %><span class="underline"><%= "#{@user.nickname}!" %></span><%= " Welcome to your profile 😎" %></h1>
+
+
 
     <!--   EDIT YOUR PERSONAL INFO -->
 
@@ -76,14 +77,14 @@
                 <div class="d-flex">
                   <div class="p-2">
                     <h2>You lived a greatfull experience with <%= reservation.star.name %></h2>
-                    <p>Le <%= reservation.start %> to <%= reservation.end %> and you<strong>enjoyed it</strong>.</p>
+                    <p>from <%= reservation.start.strftime(" %m/%d/%y") %> to <%= reservation.end.strftime(" %m/%d/%y") %>, we hope you <strong>enjoyed</strong> it!</p>
                   </div>
                   <div class="ml-auto p-2">
                     <%= link_to reservation_path(reservation), method: :delete, data: { confirm: "Are you sure you want to delete your reservation?"} do %>
                     <i class="fas fa-trash" style="padding-left: 40px;"></i>
                     <% end %>
                   </div>
-                </div>
+              </div>
               </div>
               <br>
             </div>
