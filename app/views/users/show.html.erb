@@ -1,11 +1,11 @@
 <div class="row">
-  <div class="col-img">Image</div>
+  <div class="col-img" style="background-image: url('<%= cl_image_path current_user.photo.key, crop: :fill %>')">
+  </div>
 
   <div class="col-form">
-      <div class="user-image">
-        <%= cl_image_path curent_user.photo.key%>
-      </div>
       <h1><%= "Hello " %><span class="underline"><%= "#{@user.nickname}!" %></span><%= " Welcome to your profile 😎" %></h1>
+
+
 
     <!--   EDIT YOUR PERSONAL INFO -->
 
