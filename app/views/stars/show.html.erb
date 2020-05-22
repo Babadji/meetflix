@@ -5,7 +5,7 @@
     <div class="star-titleS">
       <div class="backgroundimgS">
         <% if @star.photo%>
-        <%= cl_image_tag @star.photo.key%>
+          <%= cl_image_tag @star.photo.key%>
         <% end%>
       </div>
       <div class="text-imageS">
@@ -27,8 +27,8 @@
       <p>Posted by: <%= @star.user.nickname%></p>
       <div class="avatar-userS">
         <% if @star.user.photo%>
-        <%= cl_image_tag @star.user.photo.key%>
-        <% end%>
+          <%= cl_image_tag @star.user.photo.key%>
+        <% end %>
       </div>  
     </div>
 

@@ -1,5 +1,9 @@
 <div class="row">
-  <div class="col-img" style="background-image: url('<%= cl_image_path current_user.photo.key, crop: :fill %>')">
+  <% if current_user.photo.attached?%>
+    <div class="col-img" style="background-image: url('<%= cl_image_path current_user.photo.key, crop: :fill %>')">
+  <% else%>
+    <div class="col-img" style="background-image: url('https://www.shareicon.net/data/2016/07/05/791224_man_512x512.png')">
+  <% end %>
   </div>
 
   <div class="col-form">
