@@ -12,7 +12,7 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to user_path(current_user), notice: "Reservation successfully created"
     else
-      render :new
+      render "stars/show"
     end
   end
 
