@@ -1,68 +1,84 @@
-<div class="container">
-  <br>
-  <br>
-  <h1><%= "Hello " %><span class="underline"><%= "#{@user.nickname}!" %></span><%= " Welcome to your profile 😎" %></h1>
+<div class="row">
+  <div class="col-img">Image</div>
 
-<!--   EDIT YOUR PERSONAL INFO -->
+  <div class="col-form">
+      <div class="user-image">
+      </div>
+      <h1><%= "Hello " %><span class="underline"><%= "#{@user.nickname}!" %></span><%= " Welcome to your profile 😎" %></h1>
 
-  <%= link_to "Edit your profile", "#", class: "btn btn-ghost" %>
+    <!--   EDIT YOUR PERSONAL INFO -->
 
-  <div>
+      <%= link_to "Edit your profile", "#", class: "btn btn-ghost" %>
 
-  </div>
-  <br>
-  <br>
-  <h2>Create a new star</h2>
-
-  <div>
-    <%= render 'stars/form' %>
-  </div>
-
-
-  <!--    VIEW YOUR LAST POST -->
-
-  <div>
-    <div class="container-orders">
-      <% @post_stars.each do |star| %>
-        <div>
-          <div class="card-product container-orders">
-            <%= cl_image_tag star.photo.key%>
-            <div class="card-product-infos">
-              <p><strong>Your date :</strong></p>
-              <p><%= star.name %></p>
-              <% if policy(star).edit? %>
-              <%= link_to 'Edit', edit_user_star_path(star) %>
-              <% end %>
-              <% if policy(star).destroy? %>
-              <%= link_to 'Destroy', star, method: :delete, data: { confirm: "Are you sure you want to delete your star?"} %>
-              <% end %>
-            </div>
-            <br>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
-
-<!--    VIEW YOUR LAST RESERVATIONS -->
-
-  <div>
-    <h2>Your last orders</h2>
-  </div>
-
-  <div class="containerzz">
-    <% @reservations.each do |reservation| %>
       <div>
-        <div class="card-product container-orders">
-          <%= cl_image_tag reservation.star.photo.key%>
-          <div class="card-product-infos">
-            <h2>You lived a greatfull experience with <%= reservation.star.name %></h2>
-            <p>Le <%= reservation.start %> to <%= reservation.end %> and you<strong>enjoyed it</strong>.</p>
-          </div>
-          <br>
+
+      </div>
+      <br>
+      <br>
+      <h2>Create a new star</h2>
+
+      <div>
+        <%= render 'stars/form' %>
+      </div>
+  </div>
+
+
+
+  <!--   2eme segment -->
+
+    <div class="col-last-post" style="background-color:#56adf3;">
+      <!--    VIEW YOUR LAST POST -->
+
+      <div>
+        <h2>Your last post</h2>
+      </div>
+
+      <div class="border">
+        <div class="container-orders border">
+          <% @post_stars.each do |star| %>
+            <div>
+              <div class="card-product container-orders">
+                <%= cl_image_tag star.photo.key%>
+                <div class="card-product-infos">
+                  <p><strong>Your date :</strong></p>
+                  <p><%= star.name %></p>
+                  <% if policy(star).edit? %>
+                  <%= link_to 'Edit', edit_user_star_path(star) %>
+                  <% end %>
+                  <% if policy(star).destroy? %>
+                  <%= link_to 'Destroy', star, method: :delete, data: { confirm: "Are you sure you want to delete your star?"} %>
+                  <% end %>
+                </div>
+                <br>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
-    <% end %>
+    </div>
+
+
+    <div class="col-last-order" style="background-color:#fbdf53;">
+      <!--    VIEW YOUR LAST RESERVATIONS -->
+
+      <div>
+        <h2>Your last orders</h2>
+      </div>
+
+      <div class="containerzz">
+        <% @reservations.each do |reservation| %>
+          <div>
+            <div class="card-product container-orders">
+              <%= cl_image_tag reservation.star.photo.key%>
+              <div class="card-product-infos">
+                <h2>You lived a greatfull experience with <%= reservation.star.name %></h2>
+                <p>Le <%= reservation.start %> to <%= reservation.end %> and you<strong>enjoyed it</strong>.</p>
+              </div>
+              <br>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

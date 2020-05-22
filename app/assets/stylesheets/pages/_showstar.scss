@@ -6,13 +6,13 @@
 }
 
 .wrapperS1 {
-  margin: 5px;
+  margin: 25px;
   width: 600px;
-  height: 200px;
+  height: 500px;
 }
 
 .star-titleS {
-  padding: 5px;
+  padding: 15px;
   background-color: white;
   width: 400px;
   height: auto;
@@ -38,7 +38,7 @@
 
 .wrapperS2 {
   margin-right: auto;
-  margin: 5px;
+  margin: 25px;
   padding: 6px;
   text-align: center;
 }
@@ -61,16 +61,24 @@
 }
 
 #map {
-  margin-left: auto;
-  margin-right: 10px;
+/*  margin-left: auto;
+  margin-right: 10px;*/
   left: auto;
+  width: 400px;
+  height: 200px;
 }
 
 .book-starS {
   display: flex;
   align-items: center;
   padding: 5px;
+  margin-left: 5px;
 }
 
+
+.colonne-form {
+  align-items: left;
+  width: 50%
+}
 
 

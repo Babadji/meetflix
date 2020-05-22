@@ -13,41 +13,52 @@
           <%= @star.name%>
         </h1>
         <p>in
-          <%= @star.category%>
+          <strong><%= @star.category%></strong>
         </p>
         <h4><%= @star.price%> $/J</h4>
       </div>
     </div>
 
+    <br>
+    <hr>
+
     <div class="product-userS">
-      <p>Posted by: <%= @star.user.nickname%></p>
+      <p>Posted by: <strong><%= @star.user.nickname%></strong></p>
       <img class="avatar-userS" src="">
     </div>
 
   </div>
 
   <div class="wrapperS2">
-
     <div class="star-descS">
       <h2>Live an incredible experience with <%= @star.name%></h2>
       <div class="descriptionS">
         <p><%= @star.description%><p>
       </div>
-      <!--<div class="review"><ul class="list-inline"><li><img class="fa fa-star"></li>*5</ul></div> -->
     </div>
 
-    <div class="book-starS">
-      <div id="map"
-        style="width: 300px; height: 300px;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-      </div>
-      <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-        <%= simple_form_for [@star, Reservation.new] do |f| %>
-          <%= f.input :start, as: :string, required: true, input_html: {class: "datepicker"} %>
-          <%= f.input :end, as: :string, required: true, input_html: {class: "datepicker"} %>
-          <%= f.button :submit, "BOOK", class: "btn btn-danger" %>
-        <% end %>
+    <div class="container">
+      <div class="row">
+
+        <div class="colonne-map">
+          <div class="book-starS">
+            <div id="map"
+              style="width: 300px; height: 300px;"
+              data-markers="<%= @markers.to_json %>"
+              data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+          </div>
+        </div>
+
+        <div class="colonne-form">
+          <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+            <%= simple_form_for [@star, Reservation.new] do |f| %>
+              <%= f.input :start, as: :string, required: true, input_html: {class: "datepicker"} %>
+              <%= f.input :end, as: :string, required: true, input_html: {class: "datepicker"} %>
+              <%= f.button :submit, "BOOK", class: "btn btn-danger" %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
