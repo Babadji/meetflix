@@ -35,10 +35,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initMapbox();
   flatpickr(".datepicker", {
     altInput: true,
     minDate: "today",
     maxDate: new Date().fp_incr(365),
   });
-  initMapbox();
 });
