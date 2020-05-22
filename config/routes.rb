@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :stars, only: [:index, :show] do
   resources :reservations, only: [:show, :new, :create]
   end
+  resources :reservations, only: [:destroy]
 end

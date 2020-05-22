@@ -25,6 +25,8 @@ class StarsController < ApplicationController
   end
 
   def edit
+    @star = Star.find(params[:id].to_i)
+    authorize @star
   end
 
   def create
@@ -48,8 +50,10 @@ class StarsController < ApplicationController
   end
 
   def destroy
+    @star = Star.find(params[:id])
+    authorize @star
     @star.destroy
-    redirect_to stars_url, notice: "Star has been succesfully destroyed"
+    redirect_to user_path(current_user), notice: "Star has been succesfully destroyed"
   end
 
   private

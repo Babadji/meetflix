@@ -13,7 +13,7 @@
 
     <!--   EDIT YOUR PERSONAL INFO -->
 
-      <%= link_to "Edit your profile", "#", class: "btn btn-ghost" %>
+      <%#= link_to "Edit your profile", edit_user_path(current_user), class: "btn btn-ghost" %>
 
       <div>
 
@@ -48,10 +48,12 @@
                   <p><strong>Your date :</strong></p>
                   <p><%= star.name %></p>
                   <% if policy(star).edit? %>
-                  <%= link_to 'Edit', edit_user_star_path(star) %>
+                  <%= link_to 'Edit', edit_user_star_path(current_user, star) %>
                   <% end %>
                   <% if policy(star).destroy? %>
-                  <%= link_to 'Destroy', star, method: :delete, data: { confirm: "Are you sure you want to delete your star?"} %>
+                  <%= link_to user_star_path(current_user, star), method: :delete, data: { confirm: "Are you sure you want to delete your star?"} do%>
+                    <i class="fas fa-trash" style="padding-left: 480px;"></i>
+                  <% end %>
                   <% end %>
                 </div>
                 <br>
@@ -76,8 +78,17 @@
             <div class="card-product container-orders">
               <%= cl_image_tag reservation.star.photo.key%>
               <div class="card-product-infos">
-                <h2>You lived a greatfull experience with <%= reservation.star.name %></h2>
-                <p>from <%= reservation.start.strftime(" %m/%d/%y") %> to <%= reservation.end.strftime(" %m/%d/%y") %>, we hope you <strong>enjoyed</strong> it!</p>
+                <div class="d-flex">
+                  <div class="p-2">
+                    <h2>You lived a greatfull experience with <%= reservation.star.name %></h2>
+                    <p>from <%= reservation.start.strftime(" %m/%d/%y") %> to <%= reservation.end.strftime(" %m/%d/%y") %>, we hope you <strong>enjoyed</strong> it!</p>
+                  </div>
+                  <div class="ml-auto p-2">
+                    <%= link_to reservation_path(reservation), method: :delete, data: { confirm: "Are you sure you want to delete your reservation?"} do %>
+                    <i class="fas fa-trash" style="padding-left: 40px;"></i>
+                    <% end %>
+                  </div>
+              </div>
               </div>
               <br>
             </div>
