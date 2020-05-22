@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("flatpickr/dist/themes/material_red.css");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -34,6 +35,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  flatpickr(".datepicker", {});
+  flatpickr(".datepicker", {
+    altInput: true,
+    minDate: "today",
+    maxDate: new Date().fp_incr(365),
+  });
   initMapbox();
 });

@@ -3,6 +3,7 @@ require "open-uri"
 
 User.destroy_all
 Star.destroy_all
+Reservation.destroy_all
 puts 'Creating users...'
 
 jumaru = User.new(nickname: 'Jumaru', email: "chilling@gmail.com", password: "123456")

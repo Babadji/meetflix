@@ -72,7 +72,7 @@
               <%= cl_image_tag reservation.star.photo.key%>
               <div class="card-product-infos">
                 <h2>You lived a greatfull experience with <%= reservation.star.name %></h2>
-                <p>Le <%= reservation.start %> to <%= reservation.end %> and you<strong>enjoyed it</strong>.</p>
+                <p>from <%= reservation.start.strftime(" %m/%d/%y") %> to <%= reservation.end.strftime(" %m/%d/%y") %>, we hope you <strong>enjoyed</strong> it!</p>
               </div>
               <br>
             </div>
