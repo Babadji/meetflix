@@ -26,9 +26,6 @@ claire_photo = URI.open('https://res.cloudinary.com/dnzggrpqe/image/upload/v1590
 claire.photo.attach(io: claire_photo, filename: 'claire_photo.png', content_type: 'image/png')
 claire.save!
 
-obama = User.create(nickname: "babama", email: "president@yahoo.com", password: "123456")
-puts 'Success'
-puts 'Creating characters (stars)...'
 
 # # Stars
 
